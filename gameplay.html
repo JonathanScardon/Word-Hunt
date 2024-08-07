@@ -11,7 +11,8 @@
             align-items: center;
         }
         .game-data{
-            border-color: black;
+            display: grid;
+            grid-template-columns: 50px 25px;
             margin-top: 100px;
             margin-bottom: 100px;
             padding-left: 100px;
@@ -44,15 +45,28 @@
     </button>
     <div class = "game-container">
         <div class = "game-data">
-            <div class = "word-count">
-                Words: 0
+
+
+            <div class = "word-count-title">
+                Words:
             </div>
+            <div id = "word-count-data", class = "word-count-data">
+                0
+            </div class = "score-title">
             <div>
-                Score: 0
+                Score:
             </div>
-            <div>
-                Timer: 0:00
+            <div id = "score-data", class = "score-data">
+                0
             </div>
+            <div class = "timer-title">
+                Timer:
+            </div>
+            <div id = "timer-data", class = "timer-data">
+                0:00
+            </div>
+
+        
         </div>
         <div id = "grid-container", class = "grid-container">
             <div class = "grid-element" x = 0 y = 0></div>
