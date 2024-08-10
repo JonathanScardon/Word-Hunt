@@ -168,7 +168,7 @@ export class GameBoard {
         let starting_letter = "a";
         let starting_positions = this.find_starting_positions(starting_letter);
 
-        fetch('letters10.txt')
+        fetch('data/letters10.txt')
             .then(response => response.text())
             .then(text => {
                 const lines = text.split('\n');
