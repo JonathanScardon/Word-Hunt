@@ -1,8 +1,10 @@
 import { GameBoard } from './GameBoard.js';
 import { initEventListeners } from './processInput.js';
+import { User } from './user.js'
 
 
 let gameBoardInstance;
+let userInstance;
 
 
 //**Rename populateBoard to start game?*/
@@ -13,6 +15,9 @@ function populateBoard() {
     gameBoardInstance.createBoard();
     gameBoardInstance.parseEnglishDict();
     gameBoardInstance.consoleSolutions();
-    initEventListeners(gameBoardInstance)
+
+    userInstance = new User()
+
+    initEventListeners(gameBoardInstance, userInstance)
 }
 window.populateBoard = populateBoard
