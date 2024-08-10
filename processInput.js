@@ -4,13 +4,13 @@ let selectedCells = []
 /*
 add event listeners to all elements on the grid & background
 */
-export function initEventListeners(gameBoard) {
+export function initEventListeners(gameBoard, user) {
 
     document.querySelectorAll('.grid-element').forEach(cell => {
     cell.addEventListener('mousedown', startSelection);
     cell.addEventListener('mouseenter', selectCell);
 })
-    document.addEventListener('mouseup', () => endSelection(gameBoard))
+    document.addEventListener('mouseup', () => endSelection(gameBoard, user))
 }
 
 
@@ -43,20 +43,17 @@ function selectCell(event){
 /*
 when the mouse is released, the selected word is printed and the list of selected cells is reset
 */
-function endSelection(gameBoard) {    
+function endSelection(gameBoard, user) {    
     mouseDown = false;
 
     let selectedWord = selectedCells.map(c => c.cell.textContent).join('');
-
     console.log('Selected word:', selectedWord);
 
-    
-    if (!gameBoard.solutions.has(selectedWord)){
-        updateStats();
+    if (gameBoard.solutions.has(selectedWord) && selectedWord.length > 0 && !user.wordFound(selectedWord)){
+        user.addWord(selectedWord);
+        user.updateStats(selectedWord);
     }
     
-
-    //console.log('Selected Word:', selectedCells.map(c => c.cell.textContent).join(''));
     selectedCells = [];
     document.querySelectorAll('.grid-element.selected').forEach(cell => {
         cell.classList.remove('selected');
@@ -84,8 +81,15 @@ function isValidSelection(cell, x, y){
     return false
 }
 
-/**Update Word, Update Score Functions Here */
+
+/** 
+
+Update Word, Update Score Functions Here 
 
 function updateStats(){
     console.log("updating stats");
+
+    const wordCount = document.getElementbyId()
 }
+
+*/
