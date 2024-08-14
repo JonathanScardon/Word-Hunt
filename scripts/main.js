@@ -22,12 +22,13 @@ function startGame() {
 
     initEventListeners(gameBoardInstance, userInstance)
 
-    countdown(0, 2)
+    countdown(1, 20)
 }
 window.startGame = startGame
 
 function endGame() {
-    console.log("ending game")
+    console.log("ending game");
+    location.href = 'endpage.html'
 }
 
 window.endGame = endGame
