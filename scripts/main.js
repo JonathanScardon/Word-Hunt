@@ -22,7 +22,7 @@ function startGame() {
 
     initEventListeners(gameBoardInstance, userInstance)
 
-    countdown(1, 20)
+    countdown(1, 21)
 }
 window.startGame = startGame
 
