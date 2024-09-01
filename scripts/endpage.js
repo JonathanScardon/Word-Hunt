@@ -4,8 +4,8 @@ window.onload = function() {
     displaySolutions()
   
     // Clear data from localStorage if no longer needed
-    //localStorage.removeItem('gameBoardData');
-    //localStorage.removeItem('userData')
+    localStorage.removeItem('gameBoardData');
+    localStorage.removeItem('userData')
 };
 
 function displayBoard(){
@@ -24,16 +24,6 @@ function displayBoard(){
 function displaySolutions(){
     const gameBoardData = JSON.parse(localStorage.getItem('gameBoardData'));
     const userData = JSON.parse(localStorage.getItem('userData'));
-
-
-    if (!userData) {
-        console.error('No userData found in localStorage');
-    }
-
-
-
-
-
     const wordsFound = new Set(userData.wordsFound);
     let solutions = "";
 
@@ -42,10 +32,13 @@ function displaySolutions(){
 
         // Check if the solution is in wordsFound and apply italics if true
         if (wordsFound.has(solutionText)) {
-            solutionText = `<i>${solutionText}</i>`;
+            solutionText = `<b>${ (i + 1) + "." + solutionText}</b>` + "<br>";
+        }
+        else{
+            solutionText = (i + 1) + "." + solutionText + "<br>";
         }
 
-        solutions += (i + 1) + ". " + solutionText + "<br>";
+        solutions += solutionText;
     }
 
     document.getElementById('solutions-content').innerHTML = solutions;
