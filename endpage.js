@@ -1,5 +1,3 @@
-// endpage.js
-
 window.onload = function() {
     // Retrieve data from localStorage
     
@@ -15,8 +13,15 @@ window.onload = function() {
         gridItems[i].textContent = gameBoardData.board[row][col]
     }
 
-   
-    
+    let solutions = "";
+    for (let i = 0; i < gameBoardData.solutions.length; i++){
+        solutions += i + 1 + ". "
+        solutions += gameBoardData.solutions[i];
+        solutions += "<br>"
+    }
+
+    document.getElementById('solutions-content').innerHTML = solutions;
+  
     // Clear data from localStorage if no longer needed
     localStorage.removeItem('gameBoardData');
 };
