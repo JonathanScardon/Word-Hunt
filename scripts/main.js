@@ -1,7 +1,6 @@
 import { GameBoard } from './GameBoard.js';
 import { initEventListeners } from './processInput.js';
 import { User } from './user.js'
-
 import { countdown } from './timer.js'
 
 
@@ -19,12 +18,13 @@ function startGame() {
 
     initEventListeners(gameBoardInstance, userInstance)
 
-    countdown(0, 3)
+    countdown(0, 5)
 }
 
 function endGame() {
-    localStorage.setItem('gameBoardData', JSON.stringify(gameBoardInstance.toJSON()))
-    location.href = 'endpage.html'
+    localStorage.setItem('gameBoardData', JSON.stringify(gameBoardInstance.toJSON()));
+    localStorage.setItem('userData', JSON.stringify(userInstance.toJSON()));
+    location.href = 'endpage.html';
 }
 
 

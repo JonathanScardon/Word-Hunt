@@ -4,7 +4,6 @@ export class User{
         this.wordsFound = new Set();
         this.numWordsFound = 0;
         this.score = 0;
-
         this.scoringSystem = {
             3 : 100,
             4 : 400,
@@ -15,6 +14,15 @@ export class User{
             9 : 2600,
             10 : 3000,
             11 : 34000
+        }
+    }
+    
+    //returns relevant data to be converted to JSON
+    toJSON(){
+        return {
+            wordsFound: Array.from(this.wordsFound),
+            numWordsFound: this.numWordsFound,
+            score: this.score
         }
     }
 
