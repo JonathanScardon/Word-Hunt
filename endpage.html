@@ -4,8 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+
+        .endpage-content{
+            display:flex;
+            justify-content: center;
+        }
+
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .game-data{
+            display: grid;
+            grid-template-columns: 50px 25px;
+            margin-top: 100px;
+            margin-bottom: 100px;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 75px 75px 75px 75px;
+            grid-template-rows:  75px 75px 75px 75px;
+            column-gap: 40px;
+            row-gap: 40px;
+            margin-top: 00px;
+        }
+        .grid-element{
+            /*background-color: aquamarine;*/
+            text-align: center;
+            font-size: 60px;
+            font-weight: bold;
+            font-family: Courier;
+            user-select: none;
+        }
+
+        .board-solutions{
+            background-color: blueviolet;
+        }
+    </style>
+
+    <script>
+        
+    </script>
+
 </head>
 <body>
+
+    <div class = "endpage-content">
+
+        <div class = "game-container">
+            <div class = "game-data">
+    
+    
+                <div class = "word-count-title">
+                    Words:
+                </div>
+                <div id = "word-count-data", class = "word-count-data">
+                    0
+                </div class = "score-title">
+                <div>
+                    Score:
+                </div>
+                <div id = "score-data", class = "score-data">
+                    0
+                </div>
+    
+            
+            </div>
+            <div id = "grid-container", class = "grid-container">
+                <div class = "grid-element" x = 0 y = 0>a</div>
+                <div class = "grid-element" x = 0 y = 1>a</div>
+                <div class = "grid-element" x = 0 y = 2>a</div>
+                <div class = "grid-element" x = 0 y = 3>a</div>
+                <div class = "grid-element" x = 1 y = 0>a</div>
+                <div class = "grid-element" x = 1 y = 1>a</div>
+                <div class = "grid-element" x = 1 y = 2>a</div>
+                <div class = "grid-element" x = 1 y = 3>a</div>
+                <div class = "grid-element" x = 2 y = 0>a</div>
+                <div class = "grid-element" x = 2 y = 1>a</div>
+                <div class = "grid-element" x = 2 y = 2>a</div>
+                <div class = "grid-element" x = 2 y = 3>a</div>
+                <div class = "grid-element" x = 3 y = 0>a</div>
+                <div class = "grid-element" x = 3 y = 1>a</div>
+                <div class = "grid-element" x = 3 y = 2>a</div>
+                <div class = "grid-element" x = 3 y = 3>a</div>
+            </div>
+        </div>
+
+        <div class = "board-solutions">
+            test text
+        </div>
+
+
+    </div>
+
     <button  onclick = "
     location.href = 'gameplay.html'">
         play again!

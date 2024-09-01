@@ -9,9 +9,6 @@ let gameBoardInstance;
 let userInstance;
 
 
-//**Rename populateBoard to start game?*/
-//**Add an end game function: called when the timer runs out. will redirect to a ending page with summary stats */
-
 function startGame() {
     gameBoardInstance = new GameBoard();
     gameBoardInstance.createBoard();
@@ -24,11 +21,14 @@ function startGame() {
 
     countdown(1, 21)
 }
-window.startGame = startGame
 
 function endGame() {
     console.log("ending game");
     location.href = 'endpage.html'
+
+    //logic to populate ending page here?
 }
 
+
+window.startGame = startGame
 window.endGame = endGame
