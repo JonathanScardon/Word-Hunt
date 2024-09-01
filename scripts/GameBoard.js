@@ -79,6 +79,11 @@ export class GameBoard {
         }
         this.constructGraphRep();
     }
+
+
+    createCustomBoard() {
+        
+    }
  
     /*
     maps letterKey to a letter as determined by this.letterFrequencies

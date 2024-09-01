@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .solver-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .solver-instructions{
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+       
+        .grid-container {
+            display: grid;
+            grid-template-columns: 75px 75px 75px 75px;
+            grid-template-rows:  75px 75px 75px 75px;
+            column-gap: 40px;
+            row-gap: 40px;
+            margin-top: 00px;
+        }
+        .grid-element{
+            /*background-color: aquamarine;*/
+            text-align: center;
+            font-size: 60px;
+            font-weight: bold;
+            font-family: Courier;
+            user-select: none;
+        }
+
+        .letter-input{
+            width: 68px;
+            height: 68px;
+            font-size: 60px;            
+        }
+
+        .solve-button{
+            margin-top: 50px;
+            margin-left: 370px;
+        }
+    </style>
+    <script type = "module" src = "scripts/solver.js"></script>
+</head>
+<body>
+    <div class = "solver-container">
+        <div class = "solver-instructions">
+            Instructions:
+        </div>
+
+        <div id = "grid-container", class = "grid-container">
+
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+            <div class="grid-element"><input type="text" maxlength="1" class="letter-input" /></div>
+
+        </div>
+        <button class = "solve-button">
+            solve
+        </button>
+    </div>
+</body>
+</html>
