@@ -18,7 +18,7 @@ function startGame() {
 
     initEventListeners(gameBoardInstance, userInstance)
 
-    countdown(0, 5)
+    countdown(0, 15)
 }
 
 function endGame() {

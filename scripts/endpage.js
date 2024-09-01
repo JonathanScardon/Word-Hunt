@@ -36,10 +36,10 @@ function displaySolutions(){
 
         // Check if the solution is in wordsFound and apply italics if true
         if (wordsFound.has(solutionText)) {
-            solutionText = `<b>${ (i + 1) + "." + solutionText}</b>` + "<br>";
+            solutionText = `<b>${ (i + 1) + ". " + solutionText}</b>` + "<br>";
         }
         else{
-            solutionText = (i + 1) + "." + solutionText + "<br>";
+            solutionText = (i + 1) + ". " + solutionText + "<br>";
         }
 
         solutions += solutionText;
