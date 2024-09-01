@@ -1,6 +1,6 @@
 window.onload = function() {
     
-    displayBoard()
+    displayBoardandStats()
     displaySolutions()
   
     // Clear data from localStorage if no longer needed
@@ -8,7 +8,7 @@ window.onload = function() {
     localStorage.removeItem('userData')
 };
 
-function displayBoard(){
+function displayBoardandStats(){
     const gameBoardData = JSON.parse(localStorage.getItem('gameBoardData'));
     const gridContainer = document.getElementById('grid-container');
     const gridItems = gridContainer.getElementsByClassName('grid-element');
@@ -18,6 +18,10 @@ function displayBoard(){
         let col = gridItems[i].getAttribute('y');
         gridItems[i].textContent = gameBoardData.board[row][col]
     }
+
+    const userData = JSON.parse(localStorage.getItem('userData'));
+    document.getElementById('word-count-data').textContent = userData.numWordsFound;
+    document.getElementById('score-data').textContent = userData.score;
 }
 
 
