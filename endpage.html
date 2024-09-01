@@ -7,9 +7,31 @@
 
     <style>
 
+        .endpage-header{
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 15px;
+        }
+        .home-button{
+            border: none;
+            background-color: transparent;
+        }
+
+        .home-button-img{
+            height: 25px;
+            width: 25px;
+            object-fit: contain;
+        }
+
+        .play-button{
+            margin-left: 15px;
+            margin-right: 25px;
+        }
+
         .endpage-content{
             display:flex;
             justify-content: center;
+            margin-left: 150px;
         }
 
         .game-container {
@@ -45,7 +67,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 500px;
+            width: 450px;
         }
 
         .solutions-title{
@@ -57,10 +79,14 @@
             overflow: auto;
             border: 1px solid;
             width: 200px;
-            height: 380px;
+            height: 360px;
             padding-left: 20px;
             padding-top: 20px;
             padding-bottom: 20px;
+        }
+
+        .solutions-text{
+            width: 200px;
         }
     </style>
 
@@ -70,6 +96,18 @@
 </head>
 <body>
 
+    <div class = "endpage-header">
+
+     
+        <button class = "home-button" onclick = "location.href = 'startpage.html'">
+            <img class = "home-button-img" src="images/home-icon.png" alt="Home">
+        </button>
+    
+        <button class = "play-button" onclick = "location.href = 'gameplay.html'">
+            play again!
+        </button>
+    </div>
+    
     <div class = "endpage-content">
 
         <div class = "game-container">
@@ -117,14 +155,13 @@
             </div>
             <div class = "solutions-content", id = "solutions-content">
             </div>
+            <div class = "solutions-text">
+                Note: solutions in italics were found by user
+            </div>
         </div>
 
 
     </div>
 
-    <button  onclick = "
-    location.href = 'gameplay.html'">
-        play again!
-    </button>
 </body>
 </html>
