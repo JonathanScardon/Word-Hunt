@@ -80,16 +80,3 @@ function isValidSelection(cell, x, y){
     }
     return false
 }
-
-
-/** 
-
-Update Word, Update Score Functions Here 
-
-function updateStats(){
-    console.log("updating stats");
-
-    const wordCount = document.getElementbyId()
-}
-
-*/
