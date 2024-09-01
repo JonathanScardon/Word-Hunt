@@ -49,6 +49,14 @@ export class GameBoard {
 
     }
 
+    //returns relevant data to be converted to JSON
+    toJSON() {
+        return {
+            board: this.board,
+            solutions: Array.from(this.solutions)
+          };
+    }
+
 
     /*
     Iterates over grid elements and populates webpage with letters, while also populating

@@ -19,14 +19,12 @@ function startGame() {
 
     initEventListeners(gameBoardInstance, userInstance)
 
-    countdown(1, 21)
+    countdown(0, 3)
 }
 
 function endGame() {
-    console.log("ending game");
+    localStorage.setItem('gameBoardData', JSON.stringify(gameBoardInstance.toJSON()))
     location.href = 'endpage.html'
-
-    //logic to populate ending page here?
 }
 
 
