@@ -14,7 +14,7 @@ export function countdown(m, s){
 
     
     if (m > 0 || s > 0){
-        //setTimeout(() => countdown(m, s), 1000);
+        setTimeout(() => countdown(m, s), 1000);
     }
     else {
         console.log('reached end of game');
