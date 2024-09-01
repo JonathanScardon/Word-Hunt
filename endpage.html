@@ -34,7 +34,6 @@
             margin-top: 00px;
         }
         .grid-element{
-            /*background-color: aquamarine;*/
             text-align: center;
             font-size: 60px;
             font-weight: bold;
@@ -42,8 +41,26 @@
             user-select: none;
         }
 
-        .board-solutions{
-            background-color: blueviolet;
+        .solutions-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 500px;
+        }
+
+        .solutions-title{
+            margin-top: 100px;
+            margin-bottom: 118px;
+        }
+
+        .solutions-content{
+            overflow: auto;
+            border: 1px solid;
+            width: 200px;
+            height: 380px;
+            padding-left: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
         }
     </style>
 
@@ -81,21 +98,25 @@
                 <div class = "grid-element" x = 0 y = 3></div>
                 <div class = "grid-element" x = 1 y = 0></div>
                 <div class = "grid-element" x = 1 y = 1></div>
-                <div class = "grid-element" x = 1 y = 2>a</div>
-                <div class = "grid-element" x = 1 y = 3>a</div>
-                <div class = "grid-element" x = 2 y = 0>a</div>
-                <div class = "grid-element" x = 2 y = 1>a</div>
-                <div class = "grid-element" x = 2 y = 2>a</div>
-                <div class = "grid-element" x = 2 y = 3>a</div>
-                <div class = "grid-element" x = 3 y = 0>a</div>
-                <div class = "grid-element" x = 3 y = 1>a</div>
-                <div class = "grid-element" x = 3 y = 2>a</div>
-                <div class = "grid-element" x = 3 y = 3>a</div>
+                <div class = "grid-element" x = 1 y = 2></div>
+                <div class = "grid-element" x = 1 y = 3></div>
+                <div class = "grid-element" x = 2 y = 0></div>
+                <div class = "grid-element" x = 2 y = 1></div>
+                <div class = "grid-element" x = 2 y = 2></div>
+                <div class = "grid-element" x = 2 y = 3></div>
+                <div class = "grid-element" x = 3 y = 0></div>
+                <div class = "grid-element" x = 3 y = 1></div>
+                <div class = "grid-element" x = 3 y = 2></div>
+                <div class = "grid-element" x = 3 y = 3></div>
             </div>
         </div>
 
-        <div class = "board-solutions">
-            test text
+        <div class = "solutions-container">
+            <div class = "solutions-title">
+                Solutions:
+            </div>
+            <div class = "solutions-content", id = "solutions-content">
+            </div>
         </div>
 
 
