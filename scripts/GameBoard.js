@@ -51,6 +51,9 @@ export class GameBoard {
 
     //returns relevant data to be converted to JSON
     toJSON() {
+        console.log("within toJSON function of game board");
+        console.log(this.solutions);
+        console.log(Array.from(this.solutions));
         return {
             board: this.board,
             solutions: Array.from(this.solutions)
@@ -81,8 +84,13 @@ export class GameBoard {
     }
 
 
-    createCustomBoard() {
-        
+    createCustomBoard(userBoard) {
+        for (let i = 0; i < this.size; i ++){
+            for (let j = 0; j < this.size; j++){
+                this.board[i][j] = userBoard[i][j];
+            }
+        }
+        this.constructGraphRep();
     }
  
     /*
@@ -266,6 +274,10 @@ export class GameBoard {
 
    consoleSolutions() {
     console.log(this.solutions);
+   }
+
+   getSolutions() {
+    return this.solutions
    }
   
 

@@ -1,8 +1,12 @@
+/**adds event listener to solve button; calls function checkSolvable when clicked*/
 document.addEventListener('DOMContentLoaded', () => {
     const solveButton = document.querySelector('.solve-button');
     solveButton.addEventListener('click', checkSolvable);
 });
 
+/*checks if user has input a valid custom board. if true, then redirect to solverEndpage.html and save board in
+local storage to be reloaded on that page. if false, alerts user to submit a valid board
+*/
 function checkSolvable(){
     const inputs = document.querySelectorAll('.letter-input');
     let validInputs = true;
@@ -26,8 +30,9 @@ function checkSolvable(){
             }
         } 
         )
-        console.log("all good!");
         console.log(userBoard);
+        localStorage.setItem('userBoard', JSON.stringify(userBoard));
+        location.href = 'solverEndpage.html';
     }
     else{
         alert("Please double check instructions!")
@@ -35,6 +40,7 @@ function checkSolvable(){
 
 }
 
+/**Returns if a character c is an english letter */
 function isLetter(c) {
     return /^[a-zA-Z]$/.test(c)
 }
