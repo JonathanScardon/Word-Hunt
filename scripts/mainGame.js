@@ -24,7 +24,7 @@ function startGame() {
 function endGame() {
     localStorage.setItem('gameBoardData', JSON.stringify(gameBoardInstance.toJSON()));
     localStorage.setItem('userData', JSON.stringify(userInstance.toJSON()));
-    location.href = 'endpage.html';
+    //location.href = 'gameEndpage.html';
 }
 
 

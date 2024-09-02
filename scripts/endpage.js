@@ -4,7 +4,7 @@ window.onload = function() {
     displaySolutions()
   
     // Clear data from localStorage if no longer needed
-    localStorage.removeItem('gameBoardData');
+    //localStorage.removeItem('gameBoardData');
     localStorage.removeItem('userData')
 };
 
@@ -27,6 +27,11 @@ function displayBoardandStats(){
 
 function displaySolutions(){
     const gameBoardData = JSON.parse(localStorage.getItem('gameBoardData'));
+
+    console.log(gameBoardData);
+    console.log(gameBoardData.solutions)
+
+
     const userData = JSON.parse(localStorage.getItem('userData'));
     const wordsFound = new Set(userData.wordsFound);
     let solutions = "";
@@ -46,4 +51,5 @@ function displaySolutions(){
     }
 
     document.getElementById('solutions-content').innerHTML = solutions;
+
 }
