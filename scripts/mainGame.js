@@ -18,13 +18,13 @@ function startGame() {
 
     initEventListeners(gameBoardInstance, userInstance)
 
-    countdown(0, 15)
+    countdown(0, 5)
 }
 
 function endGame() {
     localStorage.setItem('gameBoardData', JSON.stringify(gameBoardInstance.toJSON()));
     localStorage.setItem('userData', JSON.stringify(userInstance.toJSON()));
-    //location.href = 'gameEndpage.html';
+    location.href = 'gameEndpage.html';
 }
 
 

@@ -27,11 +27,6 @@ function displayBoardandStats(){
 
 function displaySolutions(){
     const gameBoardData = JSON.parse(localStorage.getItem('gameBoardData'));
-
-    console.log(gameBoardData);
-    console.log(gameBoardData.solutions)
-
-
     const userData = JSON.parse(localStorage.getItem('userData'));
     const wordsFound = new Set(userData.wordsFound);
     let solutions = "";

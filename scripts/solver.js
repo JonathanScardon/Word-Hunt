@@ -1,3 +1,6 @@
+import { GameBoard } from './GameBoard.js';
+
+
 /**adds event listener to solve button; calls function checkSolvable when clicked*/
 document.addEventListener('DOMContentLoaded', () => {
     const solveButton = document.querySelector('.solve-button');
@@ -31,7 +34,8 @@ function checkSolvable(){
         } 
         )
         console.log(userBoard);
-        localStorage.setItem('userBoard', JSON.stringify(userBoard));
+        solve(userBoard)
+        //localStorage.setItem('userBoard', JSON.stringify(userBoard));
         location.href = 'solverEndpage.html';
     }
     else{
@@ -43,4 +47,12 @@ function checkSolvable(){
 /**Returns if a character c is an english letter */
 function isLetter(c) {
     return /^[a-zA-Z]$/.test(c)
+}
+
+
+function solve(board){
+    let gameBoardInstance = new GameBoard()
+    gameBoardInstance.createCustomBoard(board);
+    gameBoardInstance.parseEnglishDict();
+    localStorage.setItem('gameBoardData', JSON.stringify(gameBoardInstance.toJSON()));
 }
