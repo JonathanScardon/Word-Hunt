@@ -1,10 +1,6 @@
-import { GameBoard } from './GameBoard.js';
-let gameBoardInstance;
-
-
 window.onload = function() {
     displayBoard();
-    solve();
+    displaySolutions();
 };
 
 
@@ -22,20 +18,14 @@ function displayBoard(){
 }
 
 
-function solve(){
-    const userBoard = JSON.parse(localStorage.getItem('userBoard'));
-
-    gameBoardInstance = new GameBoard()
-    gameBoardInstance.createCustomBoard(userBoard);
-    gameBoardInstance.parseEnglishDict();
-
-    let s = gameBoardInstance.getSolutions();
-    console.log(s);
-
-
-    localStorage.setItem('gameBoardData', JSON.stringify(gameBoardInstance.toJSON()));
+function displaySolutions(){
     const gameBoardData = JSON.parse(localStorage.getItem('gameBoardData'));
-    console.log(gameBoardData);
-    console.log(gameBoardData.solutions)
+    let solutionText = "";
 
+    for (let i = 0; i < gameBoardData.solutions.length; i++){
+        let word = gameBoardData.solutions[i];
+        console.log(word)
+        solutionText += (i + 1) + ". " + word + "<br>";
+    }
+    document.getElementById('solutions-content').innerHTML = solutionText;
 }

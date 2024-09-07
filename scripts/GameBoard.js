@@ -51,9 +51,6 @@ export class GameBoard {
 
     //returns relevant data to be converted to JSON
     toJSON() {
-        console.log("within toJSON function of game board");
-        console.log(this.solutions);
-        console.log(Array.from(this.solutions));
         return {
             board: this.board,
             solutions: Array.from(this.solutions)
@@ -274,11 +271,6 @@ export class GameBoard {
 
    consoleSolutions() {
     console.log(this.solutions);
-   }
-
-   getSolutions() {
-    return this.solutions
-   }
-  
+   }  
 
 }
