@@ -12,9 +12,18 @@
             align-items: center;
         }
 
-        .solver-instructions{
+        .instructions-header{
             margin-top: 100px;
-            margin-bottom: 100px;
+            font-family: 'Lobster', cursive;
+            font-weight: bold;
+        }
+
+        .instructions-content{
+            margin-top: 10px;
+            margin-bottom: 60px;
+            width: 350px;
+            font-family: 'Lobster', cursive;
+            font-size: 15px;
         }
        
         .grid-container {
@@ -23,15 +32,14 @@
             grid-template-rows:  75px 75px 75px 75px;
             column-gap: 40px;
             row-gap: 40px;
-            margin-top: 00px;
         }
-        .grid-element{
-            /*background-color: aquamarine;*/
-            text-align: center;
-            font-size: 60px;
-            font-weight: bold;
-            font-family: Courier;
-            user-select: none;
+
+        .grid-element input.letter-input {
+            font-family: Courier; 
+            font-size: 60px; 
+            text-align: center; 
+            width: 70px; 
+            height: 70px; 
         }
 
         .letter-input{
@@ -41,16 +49,33 @@
         }
 
         .solve-button{
+            width: 60px;
             margin-top: 50px;
-            margin-left: 370px;
+            margin-left: 362px;
+            font-family: 'Lobster', cursive;
+            font-size: 15px;
+            background-color: rgb(89, 215, 89);
+            box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.22);
+        }
+
+        .solve-button:hover{
+            cursor: pointer;
+            background-color: rgb(78, 190, 78);
+        }
+
+        .solve-button:active{
+            background-color: rgb(66, 162, 66);
         }
     </style>
     <script type = "module" src = "scripts/solver.js"></script>
 </head>
 <body>
     <div class = "solver-container">
-        <div class = "solver-instructions">
+        <div class = "instructions-header">
             Instructions:
+        </div>
+        <div class = "instructions-content">
+            Fill in each tile with a letter. When all tiles are populated, click 'Solve' to solve the board.
         </div>
 
         <div id = "grid-container", class = "grid-container">

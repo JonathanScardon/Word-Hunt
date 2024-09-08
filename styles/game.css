@@ -5,14 +5,13 @@
 }
 .game-data{
     display: grid;
-    grid-template-columns: 50px 50px;
-    row-gap: 7px;
-    column-gap: 15px;
+    grid-template-columns: 50px 75px;
+    column-gap: 30px;
     margin-top: 100px;
-    margin-bottom: 75px;
-    padding-left: 100px;
-    padding-right: 100px;
-    font-size: 20px;
+    margin-bottom: 70px;
+    margin-left: 50px;
+    font-size: 18px;
+    font-family: 'Lobster', cursive;
 }
 .grid-container {
     display: grid;
@@ -25,7 +24,6 @@
 .grid-element{
     text-align: center;
     font-size: 60px;
-    font-weight: 550;
     font-family: Courier;
     user-select: none;
 }
