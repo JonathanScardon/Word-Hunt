@@ -4,7 +4,7 @@ window.onload = function() {
     displaySolutions()
   
     // Clear data from localStorage if no longer needed
-    //localStorage.removeItem('gameBoardData');
+    localStorage.removeItem('gameBoardData');
     localStorage.removeItem('userData')
 };
 
@@ -34,7 +34,7 @@ function displaySolutions(){
     for (let i = 0; i < gameBoardData.solutions.length; i++){
         let solutionText = gameBoardData.solutions[i];
 
-        // Check if the solution is in wordsFound and apply italics if true
+        // Check if the solution is in wordsFound and apply bold if true
         if (wordsFound.has(solutionText)) {
             solutionText = `<b>${ (i + 1) + ". " + solutionText}</b>` + "<br>";
         }
