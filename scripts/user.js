@@ -1,5 +1,5 @@
 export class User{
-
+    
     constructor() {
         this.wordsFound = new Set();
         this.numWordsFound = 0;

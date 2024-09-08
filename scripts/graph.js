@@ -1,3 +1,6 @@
+/**
+ * Graph implemented with adjacency list
+ */
 export class Graph {
     constructor() {
       this.adjacencyList = {};
@@ -17,7 +20,7 @@ export class Graph {
         this.addVertex(vertex2);
       }
       this.adjacencyList[vertex1].push(vertex2);
-      this.adjacencyList[vertex2].push(vertex1); // For undirected graphs
+      this.adjacencyList[vertex2].push(vertex1);
     }
   
     removeEdge(vertex1, vertex2) {
@@ -52,10 +55,4 @@ export class Graph {
         }
         return Object.keys(this.adjacencyList)
       }
-  
-    printGraph() {
-      for (let vertex in this.adjacencyList) {
-        console.log(vertex + " -> " + this.adjacencyList[vertex].join(", "));
-      }
-    }
   }
