@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "../styles/solver-endpage.css">
+    <script type = "module" src = "../scripts/solver-main.js"></script>
+</head>
+<body>
+    <div class = "endpage-header">
+
+     
+        <button class = "home-button" onclick = "location.href = 'startpage.html'">
+            <img class = "home-button-img" src="../images/home-icon.png" alt="Home">
+        </button>
+    
+        <button class = "replay-button" onclick = "location.href = 'solver.html'">
+            solve another board
+        </button>
+    </div>
+    
+    <div class = "endpage-content">
+
+        <div class = "board-container">
+
+            <div class = "board-header">
+                <b>Your Board:</b>
+            </div>
+            
+            <div id = "grid-container", class = "grid-container">
+                <div class = "grid-element" x = 0 y = 0></div>
+                <div class = "grid-element" x = 0 y = 1></div>
+                <div class = "grid-element" x = 0 y = 2></div>
+                <div class = "grid-element" x = 0 y = 3></div>
+                <div class = "grid-element" x = 1 y = 0></div>
+                <div class = "grid-element" x = 1 y = 1></div>
+                <div class = "grid-element" x = 1 y = 2></div>
+                <div class = "grid-element" x = 1 y = 3></div>
+                <div class = "grid-element" x = 2 y = 0></div>
+                <div class = "grid-element" x = 2 y = 1></div>
+                <div class = "grid-element" x = 2 y = 2></div>
+                <div class = "grid-element" x = 2 y = 3></div>
+                <div class = "grid-element" x = 3 y = 0></div>
+                <div class = "grid-element" x = 3 y = 1></div>
+                <div class = "grid-element" x = 3 y = 2></div>
+                <div class = "grid-element" x = 3 y = 3></div>
+            </div>
+        </div>
+
+        <div class = "solutions-container">
+            <div class = "solutions-title">
+                <b>Solutions:</b>
+            </div>
+            <div class = "solutions-content", id = "solutions-content">
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-import { GameBoard } from './GameBoard.js';
+import { GameBoard } from './game-board.js';
 let gameBoardInstance
 
 /**adds event listener to solve button; calls function checkSolvable when clicked*/
@@ -57,5 +57,5 @@ function solve(board){
 
 function save(){
     localStorage.setItem('gameBoardData', JSON.stringify(gameBoardInstance.toJSON()));
-    location.href = 'solverEndpage.html';
+    location.href = 'solver-endpage.html';
 }

@@ -1,5 +1,5 @@
-import { GameBoard } from './GameBoard.js';
-import { initEventListeners } from './processInput.js';
+import { GameBoard } from './game-board.js';
+import { initEventListeners } from './process-input.js';
 import { User } from './user.js'
 import { countdown } from './timer.js'
 
@@ -13,13 +13,15 @@ window.onload = function() {
     gameBoardInstance.consoleSolutions();
     userInstance = new User()
     initEventListeners(gameBoardInstance, userInstance)
-    countdown(0, 2)
+    countdown(0, 3)
 }
 
 function endGame() { 
     localStorage.setItem('gameBoardData', JSON.stringify(gameBoardInstance.toJSON()));
     localStorage.setItem('userData', JSON.stringify(userInstance.toJSON()));
-    location.href = 'gameEndpage.html';
+
+    console.log(gameBoardInstance.solutions)
+    location.href = 'game-endpage.html';
 }
 
 window.endGame = endGame

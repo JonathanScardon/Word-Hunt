@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel = "stylesheet" href = "../styles/game-endpage.css">
+    <script src="../scripts/endpage.js" defer></script> <!-- Make sure the script is loaded -->
+
+
+</head>
+<body>
+
+    <div class = "endpage-header">
+
+     
+        <button class = "home-button" onclick = "location.href = 'startpage.html'">
+            <img class = "home-button-img" src="../images/home-icon.png" alt="Home">
+        </button>
+    
+        <button class = "play-button" onclick = "location.href = 'game.html'">
+            play again!
+        </button>
+    </div>
+    
+    <div class = "endpage-content">
+
+        <div class = "game-container">
+            <div class = "game-data">
+    
+    
+                <div class = "word-count-title">
+                    <b>Words:</b>
+                </div>
+                <div id = "word-count-data", class = "word-count-data">
+                    0
+                </div class = "score-title">
+                <div>
+                    <b>Score:</b>
+                </div>
+                <div id = "score-data", class = "score-data">
+                    0
+                </div>
+    
+            
+            </div>
+            <div id = "grid-container", class = "grid-container">
+                <div class = "grid-element" x = 0 y = 0></div>
+                <div class = "grid-element" x = 0 y = 1></div>
+                <div class = "grid-element" x = 0 y = 2></div>
+                <div class = "grid-element" x = 0 y = 3></div>
+                <div class = "grid-element" x = 1 y = 0></div>
+                <div class = "grid-element" x = 1 y = 1></div>
+                <div class = "grid-element" x = 1 y = 2></div>
+                <div class = "grid-element" x = 1 y = 3></div>
+                <div class = "grid-element" x = 2 y = 0></div>
+                <div class = "grid-element" x = 2 y = 1></div>
+                <div class = "grid-element" x = 2 y = 2></div>
+                <div class = "grid-element" x = 2 y = 3></div>
+                <div class = "grid-element" x = 3 y = 0></div>
+                <div class = "grid-element" x = 3 y = 1></div>
+                <div class = "grid-element" x = 3 y = 2></div>
+                <div class = "grid-element" x = 3 y = 3></div>
+            </div>
+        </div>
+
+        <div class = "solutions-container">
+            <div class = "solutions-title">
+                <b>Solutions:</b>
+            </div>
+            <div class = "solutions-content", id = "solutions-content">
+            </div>
+            <div class = "solutions-key">
+                *solutions in <b>bold</b> are the ones you've discovered. Great job!
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>
