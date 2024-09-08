@@ -1,7 +1,8 @@
 import { GameBoard } from './GameBoard.js';
-
+let gameBoardInstance
 
 /**adds event listener to solve button; calls function checkSolvable when clicked*/
+
 document.addEventListener('DOMContentLoaded', () => {
     const solveButton = document.querySelector('.solve-button');
     solveButton.addEventListener('click', checkSolvable);
@@ -33,10 +34,8 @@ function checkSolvable(){
             }
         } 
         )
-        console.log(userBoard);
         solve(userBoard)
         //localStorage.setItem('userBoard', JSON.stringify(userBoard));
-        location.href = 'solverEndpage.html';
     }
     else{
         alert("Please double check instructions!")
@@ -49,10 +48,14 @@ function isLetter(c) {
     return /^[a-zA-Z]$/.test(c)
 }
 
-
 function solve(board){
-    let gameBoardInstance = new GameBoard()
+    gameBoardInstance = new GameBoard()
     gameBoardInstance.createCustomBoard(board);
     gameBoardInstance.parseEnglishDict();
+    setTimeout(save, 150);
+}
+
+function save(){
     localStorage.setItem('gameBoardData', JSON.stringify(gameBoardInstance.toJSON()));
+    location.href = 'solverEndpage.html';
 }

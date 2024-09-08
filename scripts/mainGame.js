@@ -14,17 +14,31 @@ function startGame() {
     gameBoardInstance.parseEnglishDict();
     gameBoardInstance.consoleSolutions();
 
-    userInstance = new User()
+    console.log("within start game")
+    console.log(gameBoardInstance.solutions)
 
-    initEventListeners(gameBoardInstance, userInstance)
+    //userInstance = new User()
 
-    countdown(0, 5)
+    //initEventListeners(gameBoardInstance, userInstance)
+
+    //countdown(0, 5)
+    endGame()
+    setTimeout(endGame, 1 * 1000);
 }
 
 function endGame() {
+    /*
     localStorage.setItem('gameBoardData', JSON.stringify(gameBoardInstance.toJSON()));
     localStorage.setItem('userData', JSON.stringify(userInstance.toJSON()));
-    location.href = 'gameEndpage.html';
+
+    const gameBoardData = JSON.parse(localStorage.getItem('gameBoardData'));
+    console.log(gameBoardData);
+    */
+
+    console.log(gameBoardInstance.solutions)
+
+
+    //location.href = 'gameEndpage.html';
 }
 
 
