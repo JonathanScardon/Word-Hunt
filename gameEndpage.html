@@ -24,8 +24,21 @@
         }
 
         .play-button{
+            height: 27px;
             margin-left: 15px;
             margin-right: 25px;
+            background-color: rgb(89, 215, 89);
+            box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.22);
+            font-family: 'Lobster', cursive;
+        }
+
+        .play-button:hover{
+            cursor: pointer;
+            background-color: rgb(78, 190, 78);
+        }
+
+        .play-button:active{
+            background-color: rgb(66, 162, 66);
         }
 
         .endpage-content{
@@ -41,11 +54,13 @@
         }
         .game-data{
             display: grid;
-            grid-template-columns: 50px 25px;
+            grid-template-columns: 50px 75px;
+            column-gap: 30px;
             margin-top: 100px;
-            margin-bottom: 100px;
-            padding-left: 100px;
-            padding-right: 100px;
+            margin-bottom: 70px;
+            margin-left: 50px;
+            font-size: 18px;
+            font-family: 'Lobster', cursive;
         }
         .grid-container {
             display: grid;
@@ -58,7 +73,6 @@
         .grid-element{
             text-align: center;
             font-size: 60px;
-            font-weight: bold;
             font-family: Courier;
             user-select: none;
         }
@@ -71,22 +85,29 @@
         }
 
         .solutions-title{
-            margin-top: 100px;
-            margin-bottom: 118px;
+            margin-top: 130px;
+            margin-bottom: 85px;
+            font-family: 'Lobster', cursive;
+            font-size: 18px;
         }
 
         .solutions-content{
             overflow: auto;
             border: 1px solid;
             width: 200px;
-            height: 360px;
+            height: 355px;
             padding-left: 20px;
             padding-top: 20px;
             padding-bottom: 20px;
+            font-family: 'Lobster', cursive;
         }
 
-        .solutions-text{
-            width: 200px;
+        .solutions-key{
+            width: 225px;
+            margin-top: 10px;
+            margin-left: 30px;
+            font-size: 14px;
+            font-family: 'Lobster', cursive;
         }
     </style>
 
@@ -115,13 +136,13 @@
     
     
                 <div class = "word-count-title">
-                    Words:
+                    <b>Words:</b>
                 </div>
                 <div id = "word-count-data", class = "word-count-data">
                     0
                 </div class = "score-title">
                 <div>
-                    Score:
+                    <b>Score:</b>
                 </div>
                 <div id = "score-data", class = "score-data">
                     0
@@ -151,11 +172,11 @@
 
         <div class = "solutions-container">
             <div class = "solutions-title">
-                Solutions:
+                <b>Solutions:</b>
             </div>
             <div class = "solutions-content", id = "solutions-content">
             </div>
-            <div class = "solutions-text">
+            <div class = "solutions-key">
                 *solutions in <b>bold</b> are the ones you've discovered. Great job!
             </div>
         </div>
