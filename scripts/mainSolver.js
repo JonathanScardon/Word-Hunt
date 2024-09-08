@@ -1,18 +1,19 @@
 window.onload = function() {
     displayBoard();
     displaySolutions();
+    localStorage.removeItem(gameBoardData);
 };
 
 
 function displayBoard(){
     const gridContainer = document.getElementById('grid-container');
     const gridItems = gridContainer.getElementsByClassName('grid-element');
-    const userBoard = JSON.parse(localStorage.getItem('userBoard'));
+    const gameBoardData = JSON.parse(localStorage.getItem('gameBoardData'));
     
     for (let i = 0; i < gridItems.length; i++){
         let row = gridItems[i].getAttribute('x');
         let col = gridItems[i].getAttribute('y');
-        gridItems[i].textContent = userBoard[row][col]
+        gridItems[i].textContent = gameBoardData.board[row][col]
     }
 
 }
@@ -21,6 +22,8 @@ function displayBoard(){
 function displaySolutions(){
     const gameBoardData = JSON.parse(localStorage.getItem('gameBoardData'));
     let solutionText = "";
+
+    console.log(gameBoardData.solutions)
 
     for (let i = 0; i < gameBoardData.solutions.length; i++){
         let word = gameBoardData.solutions[i];
