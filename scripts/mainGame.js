@@ -13,7 +13,7 @@ window.onload = function() {
     gameBoardInstance.consoleSolutions();
     userInstance = new User()
     initEventListeners(gameBoardInstance, userInstance)
-    //countdown(0, 5)
+    countdown(0, 2)
 }
 
 function endGame() { 
