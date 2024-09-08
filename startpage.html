@@ -4,63 +4,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-        
-        .startpage-content{
+
+        * {
+            font-family: 'Lobster', cursive;
+        }
+
+        .page-container{
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-top: 100px;
         }
 
-        .startpage-header{
-            font-size: 30px;
+        .page-title{
+            width: 575px;
+            padding-left: 22px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            font-size: 32px;
+            font-family: 'Lobster', cursive;
+            font-size: 3rem;
+            background-color: rgb(89, 215, 89);
+            border: 2px solid rgb(53, 52, 52);
+            /*box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.22); */
         }
+
+        .page-content{
+            display: grid;
+            grid-template-columns: 500px 500px;
+            column-gap: 75px;
+        }
+
+        .header{
+            font-size: 22px;
+        }
+
+        .about-content{
+            font-size: 15px;
+        }
+
+        .subheader{
+            margin-top: 15px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        .subheader-content{
+            margin-left: 25px;
+        }
+
+        .game-options{
+            margin-top: 130px;
+            margin-bottom: 400px;
+            display: grid;
+            grid-template-columns: 100px 350px;
+            row-gap: 0px;
+        }      
 
         .solve-button, .start-button{
-
+            height: 22px;
+            width: 80px;
+            background-color: rgb(89, 215, 89);
+            box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.22);
         }
-      
-        .game-options{
-            display: grid;
-            grid-template-columns: 75px 300px;
-            column-gap: 20px;
-            row-gap: 50px;
-            margin-top: 50px;
+
+        .solve-button:hover, .start-button:hover{
+            cursor: pointer;
+            background-color: rgb(78, 190, 78);
         }
-       
 
-
+        .solve-button:active, .start-button:active{
+            background-color: rgb(66, 162, 66);
+        }
     </style>
+
 </head>
 <body>
-
-
-    <div class = "startpage-content">
-        <div class = "startpage-header">
+    
+    <div class = "page-container">
+        <div class = "page-title">
             Welcome to Word Hunt!
         </div>
-
-        <div class = "game-options">
-            <button class = "solve-button" onclick = "
-            location.href = 'solver.html'">
-                click here
-            </button>
-            <div class = "solve-button-text">
-                to solve a board and impress your friends!
+        <div class = "page-content">
+            <div class = "about-content">
+                <div class = "header">
+                    <b>About</b>
+                </div>
+                <div class = "subheader">
+                    What is word hunt?
+                </div>
+                <div class = "subheader-content">
+                    Word Hunt is a mini-game released by GamePigeon, an iMessage extension. It features a 4x4 grid of letters. You and your opponent each
+                    have 1 minute and 20 seconds to find as many words as possible. To form a word, connect adjacent letters; however, each letter tile 
+                    can only be used once per word. The player with the highest score at the end of the game wins!
+                </div>
+                <div class = "subheader">
+                    Scoring System:
+                </div>
+                <div class = "subheader-content">
+                    3 letter words: 100 points <br>
+                    4 letter words: 400 points <br>
+                    5 letter words: 800 points <br>
+                    6 letter words: 1400 points <br>
+                    7 letter words: 1800 points <br>
+                    8 letter words: 2200 points <br>
+                    9 letter words: 2600 points <br>
+                    10 letter words: 3000 points <br>
+                </div>
+                <div class = "subheader">
+                    This website offers:
+                </div> 
+                <div class = "subheader-content">
+                    1. A tool to find all possible solutions to any word hunt board - perfect for outscoring your friends!<br>
+                    2. A way for you to practice on endless Word Hunt boards. Let's face it — Word Hunt can be quite addictive. 
+                    Some of us have been guilty of spamming our friends with board after board, not just to win, but simply to keep playing.
+                    Now, you can play as much as you want without driving your friends crazy!<br>
+                </div>
             </div>
-    
-            <button class = "start-button" onclick = "
-            location.href = 'gameplay.html'">
-                click here
-            </button>
-            <div class = "start-button-text">
-                to practice your skills!
+            <div class = "game-options">
+                
+                <button class = "solve-button" onclick = "
+                location.href = 'solver.html'">
+                    click here
+                </button>
+                <div class = "solve-button-text">
+                    to solve a board and impress your friends!
+                </div>
+        
+                <button class = "start-button" onclick = "
+                location.href = 'gameplay.html'">
+                    click here
+                </button>
+                <div class = "start-button-text">
+                    to practice your skills!
+                </div>
             </div>
         </div>
-
     </div>
-      
-
 </body>
 </html>
