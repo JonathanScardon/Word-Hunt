@@ -1,0 +1,60 @@
+.solver-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instructions-header{
+    margin-top: 100px;
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+}
+
+.instructions-content{
+    margin-top: 10px;
+    margin-bottom: 60px;
+    width: 350px;
+    font-family: 'Lobster', cursive;
+    font-size: 15px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 75px 75px 75px 75px;
+    grid-template-rows:  75px 75px 75px 75px;
+    column-gap: 40px;
+    row-gap: 40px;
+}
+
+.grid-element input.letter-input {
+    font-family: Courier; 
+    font-size: 60px; 
+    text-align: center; 
+    width: 70px; 
+    height: 70px; 
+}
+
+.letter-input{
+    width: 68px;
+    height: 68px;
+    font-size: 60px;            
+}
+
+.solve-button{
+    width: 60px;
+    margin-top: 50px;
+    margin-left: 362px;
+    font-family: 'Lobster', cursive;
+    font-size: 15px;
+    background-color: rgb(89, 215, 89);
+    box-shadow: 3px 4px 2px rgba(0, 0, 0, 0.22);
+}
+
+.solve-button:hover{
+    cursor: pointer;
+    background-color: rgb(78, 190, 78);
+}
+
+.solve-button:active{
+    background-color: rgb(66, 162, 66);
+}
