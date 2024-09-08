@@ -1,13 +1,19 @@
-window.onload = function() {
-    
+/**
+ * calls displayBoardandStats() and displaySolutions() when the page loads;
+ * clears data from localStorage, as it is no longer needed
+ */
+window.onload = function() { 
     displayBoardandStats()
     displaySolutions()
-  
-    // Clear data from localStorage if no longer needed
     localStorage.removeItem('gameBoardData');
     localStorage.removeItem('userData')
 };
 
+/**
+ * Retrieves gameBoardData from local storage; uses it to populate endpage
+ * with the board the user has played. Also retrieves userData from local
+ * storage, populates it with word count and user score
+ */
 function displayBoardandStats(){
     const gameBoardData = JSON.parse(localStorage.getItem('gameBoardData'));
     const gridContainer = document.getElementById('grid-container');
@@ -24,7 +30,11 @@ function displayBoardandStats(){
     document.getElementById('score-data').textContent = userData.score;
 }
 
-
+/**
+ * Retrieves gameBoardData and userData from local storage. Checks words found
+ * by user against solution set. Displays solution set in alphabetical order.
+ * If a word was found by user, displayed in bold. 
+ */
 function displaySolutions(){
     const gameBoardData = JSON.parse(localStorage.getItem('gameBoardData'));
     const userData = JSON.parse(localStorage.getItem('userData'));
@@ -34,7 +44,6 @@ function displaySolutions(){
     for (let i = 0; i < gameBoardData.solutions.length; i++){
         let solutionText = gameBoardData.solutions[i];
 
-        // Check if the solution is in wordsFound and apply bold if true
         if (wordsFound.has(solutionText)) {
             solutionText = `<b>${ (i + 1) + ". " + solutionText}</b>` + "<br>";
         }

@@ -32,20 +32,14 @@ export class GameBoard {
         { range: [.999, 1], letter: 'q' },
 
       ];   
-      
       this.board = [["", "", "", ""],
                     ["", "", "", ""],
                     ["", "", "", ""],
                     ["", "", "", ""]];
-
       this.size = 4
-
       this.graph = new Graph();
-
       this.path = [];
-
       this.solutions = new Set();
-
     }
 
     //returns relevant data to be converted to JSON
@@ -267,9 +261,5 @@ export class GameBoard {
     })
     return path
    }
-
-   consoleSolutions() {
-    console.log(this.solutions);
-   }  
 
 }

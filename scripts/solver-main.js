@@ -1,10 +1,17 @@
+/**
+ * calls displayBoard() and displaySolutions() when the page loads;
+ * clears data from localStorage, as it is no longer needed
+ */
 window.onload = function() {
     displayBoard();
     displaySolutions();
     localStorage.removeItem(gameBoardData);
 };
 
-
+/**
+ * Retrieves gameBoardData from local storage, uses it to populate endpage
+ * with the board input by the user
+ */
 function displayBoard(){
     const gridContainer = document.getElementById('grid-container');
     const gridItems = gridContainer.getElementsByClassName('grid-element');
@@ -18,7 +25,9 @@ function displayBoard(){
 
 }
 
-
+/**
+ * Retrieves gameBoardData and displays solution set in alphabetical order.
+ */
 function displaySolutions(){
     const gameBoardData = JSON.parse(localStorage.getItem('gameBoardData'));
     let solutionText = "";

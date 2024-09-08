@@ -28,5 +28,5 @@
     user-select: none;
 }
 .grid-element.selected{
-    background-color:blue;
+    background-color:rgb(62, 136, 240);
 }
