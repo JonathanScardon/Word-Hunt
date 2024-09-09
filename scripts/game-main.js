@@ -17,7 +17,7 @@ window.onload = function() {
     gameBoardInstance.parseEnglishDict();
     userInstance = new User()
     initEventListeners(gameBoardInstance, userInstance)
-    countdown(0, 2)
+    countdown(1, 21)
 }
 
 /**
