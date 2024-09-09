@@ -53,7 +53,7 @@ function solve(board){
     gameBoardInstance = new GameBoard()
     gameBoardInstance.createCustomBoard(board);
     gameBoardInstance.parseEnglishDict();
-    setTimeout(save, 150);
+    setTimeout(save, 300);
 }
 
 /**
