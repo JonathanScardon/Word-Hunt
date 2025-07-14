@@ -1,2 +1,2 @@
 "# Word-Hunt" 
-Currently restructuring project with React + Next.js and updated artwork
+Old version. Currently restructuring project with React + Node.js and updated artwork.
